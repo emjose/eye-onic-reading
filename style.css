@@ -1,0 +1,376 @@
+:root,
+html[data-theme="light"] {
+	--font-1: "Inter", sans-serif;
+	--offset-1: 10px 10px 0px;
+	--offset-2: 12px 12px 0px;
+	--offset-3: 6px 6px 0px;
+	--offset-4: 5px 5px 0px;
+	--radius-1: 8px;
+	--radius-2: 12px;
+	--height-1: 30vh;
+	--height-2: 30.5vh;
+	--height-3: 23vh;
+	--github-color: #e7e7e8;
+	--github-fill: #2c2c2c;
+	--background-color: rgba(28, 28, 30, 0.1);
+	--focus-active-color: #dc3220;
+	--title-color: rgba(27, 27, 27, 0.835);
+	--textarea-color: #fbfbfb;
+	--border-color: rgba(37, 37, 37, 0.933);
+	--border-setting: 4px solid var(--border-color);
+	--box-shadow-setting: var(--offset-4) var(--border-color);
+	--active-border: 4px solid var(--focus-active-color);
+	--active-shadow: var(--offset-4) var(--focus-active-color);
+	--button-color: rgb(89, 89, 89);
+	--text-color: #161616;
+	--content: "Dark Mode";
+	--placeholder-color: rgb(155, 155, 155);
+	--converted-color-1: var(--button-color);
+	--converted-color-2: var(--focus-active-color);
+	--scrollbar-color: rgba(174, 174, 174, 0.549);
+	--scrollbar-hover: rgba(134, 134, 134, 0.702);
+	--selection-color: #ffb7b7bd;
+}
+
+/* ------------------------------------------------------------- */
+
+html[data-theme="dark"] {
+	--github-color: #2c2c2c;
+	--github-fill: #e7e7e8;
+	--background-color: #2c2c2c;
+	--focus-active-color: #d65a31;
+	--title-color: rgb(242, 242, 247);
+	--textarea-color: #3a3a3c;
+	--border-color: rgb(179, 179, 179);
+	--border-setting: 3px solid var(--border-color);
+	--active-border: 3px solid var(--focus-active-color);
+	--button-color: rgb(100, 100, 100);
+	--text-color: #fff;
+	--content: "Light Mode";
+	--placeholder-color: rgb(114, 114, 114);
+	--converted-color-1: rgb(154, 154, 154);
+	--converted-color-2: var(--focus-active-color);
+	--scrollbar-color: rgba(109, 109, 109, 0.572);
+	--scrollbar-hover: #aeaeae83;
+	--selection-color: #f6855f88;
+}
+
+/* ------------------------------------------------------------- */
+
+* {
+	transition: ease all 0.05s;
+}
+
+html {
+	font-family: var(--font-1);
+	font-weight: 400;
+	font-size: 18px;
+}
+
+body {
+	color: var(--text-color);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: var(--background-color);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+/* ------------------------------------------------------------- */
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+	width: 14px;
+	height: 14px;
+}
+
+::-webkit-scrollbar-track {
+	background: none !important;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--scrollbar-color);
+	border-radius: 40px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--scrollbar-hover);
+}
+
+/* ------------------------------------------------------------- */
+/* TEXT */
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.bold-letters {
+	font-weight: 700;
+	color: var(--text-color);
+}
+
+/* highlight color, selectors won't work if combined. 
+https://css-tricks.com/overriding-the-default-text-selection-color-with-css/ */
+
+::selection {
+	background: var(--selection-color);
+}
+
+::-moz-selection {
+	background: var(--selection-color);
+}
+
+::-webkit-selection {
+	background: var(--selection-color);
+}
+
+::-ms-selection {
+	background: var(--selection-color);
+}
+
+/* ------------------------------------------------------------- */
+/* TOP TITLE: EYE-ONIC READING */
+
+label[for="text"] {
+	text-align: center;
+	margin: 5% 0;
+	font-size: 4.5em;
+	font-weight: 900;
+	color: var(--title-color);
+	white-space: nowrap;
+	max-width: 90%;
+}
+
+label[for="text"]:hover {
+	color: var(--focus-active-color);
+}
+
+.thin {
+	font-weight: 400;
+	color: var(--title-color) !important;
+}
+
+/* ------------------------------------------------------------- */
+/* WHITE TEXT BOXES */
+
+label[for="text"],
+#input-wrapper,
+#button-wrapper,
+#converted-container {
+	max-width: 800px;
+}
+
+::placeholder {
+	letter-spacing: 0.4px;
+	color: var(--placeholder-color);
+	text-align: center;
+}
+
+#input-wrapper {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+
+textarea {
+	font-family: var(--font-1);
+	margin: 0;
+	font-size: 18px;
+	resize: none;
+	max-height: var(--height-3);
+	line-height: 1.5em;
+}
+
+textarea:active,
+textarea:focus {
+	outline: none;
+	border: var(--active-border);
+	-webkit-appearance: none;
+	box-shadow: var(--active-shadow);
+}
+
+textarea,
+#converted-container {
+	color: var(--text-color);
+	padding: 1.5em;
+	overflow-y: scroll;
+	letter-spacing: 0.1mm;
+	border: var(--border-setting);
+	border-radius: var(--radius-2);
+	-webkit-appearance: none;
+	-webkit-box-shadow: var(--box-shadow-setting);
+	-moz-box-shadow: var(--box-shadow-setting);
+	-ms-box-shadow: var(--box-shadow-setting);
+	-o-box-shadow: var(--box-shadow-setting);
+	box-shadow: var(--box-shadow-setting);
+	background: var(--textarea-color);
+	background-color: var(--textarea-color);
+}
+
+#converted-container {
+	min-height: var(--height-1);
+	max-height: var(--height-2);
+	width: 90%;
+	margin: 0 auto;
+	line-height: 165%;
+	box-sizing: border-box;
+	word-break: break-word;
+}
+
+/* ------------------------------------------------------------- */
+/* MIDDLE HEADER: ▼ Converted Text ▼ */
+
+#converted-header {
+	font-size: 21px;
+	margin: 3.5vh auto 3vh;
+	box-sizing: border-box;
+	text-align: center;
+	color: var(--converted-color-1);
+	user-select: none;
+}
+
+/* ------------------------------------------------------------- */
+/* BUTTONS */
+
+#button-wrapper {
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	margin: 2.5em auto 0.5em;
+	justify-content: space-between;
+	gap: 1.25em;
+	gap: 2%;
+	overflow: hidden;
+	padding: 0 0.5em 0.5em;
+}
+
+#theme-toggle::after {
+	content: var(--content);
+}
+
+button {
+	border: none;
+	padding: 0.75em;
+	width: 25%;
+	font-size: 100%;
+	font-weight: 500;
+	letter-spacing: 0.1mm;
+	border-radius: var(--radius-1);
+	color: white;
+	background-color: var(--button-color);
+}
+
+button:hover {
+	background: black;
+}
+
+button:focus,
+button:active {
+	outline: none;
+	background: var(--focus-active-color);
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+/* ------------------------------------------------------------- */
+/* GITHUB CORNER */
+
+.github-corner:hover .octo-arm {
+	animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+	0%,
+	100% {
+		transform: rotate(0);
+	}
+	20%,
+	60% {
+		transform: rotate(-25deg);
+	}
+	40%,
+	80% {
+		transform: rotate(10deg);
+	}
+}
+
+@media (max-width: 500px) {
+	.github-corner:hover .octo-arm {
+		animation: none;
+	}
+	.github-corner .octo-arm {
+		animation: octocat-wave 560ms ease-in-out;
+	}
+}
+
+/* ------------------------------------------------------------- */
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 902px) {
+	label[for="text"] {
+		font-size: 9vw;
+	}
+
+	.github-corner {
+		display: none;
+	}
+
+	textarea {
+		min-height: 26vh;
+	}
+
+	#converted-header {
+		margin: 2.5vh auto 2vh;
+		font-size: 90%;
+	}
+
+	#converted-container {
+		line-height: 1.5em;
+	}
+
+	textarea,
+	#converted-container {
+		font-size: 16px;
+	}
+
+	button {
+		padding: 2%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	textarea,
+	#converted-container {
+		padding: 0.75em;
+	}
+
+	#button-wrapper {
+		margin-top: 6%;
+	}
+
+	button {
+		border-radius: 4px;
+		font-size: 75%;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	button:hover,
+	button:active,
+	button:focus {
+		background: var(--focus-active-color);
+	}
+
+	button {
+		padding: 1.5%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
