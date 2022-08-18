@@ -1,0 +1,40 @@
+{
+	"name": "Eye-onic Reading",
+	"short_name": "Eye-onic Reading",
+	"icons": [
+		{
+			"src": "Assets/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "Assets/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"src": "Assets/android-chrome-200x200.png",
+			"sizes": "200x200",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
+			"src": "Assets/favicon-16x16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "Assets/favicon-32x32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#E7E7E8",
+	"background_color": "#E7E7E8",
+	"display": "standalone",
+	"lang": "en-US",
+	"id": "https://eye-onic-reading.vercel.app/",
+	"start_url": "/",
+	"scope": "/",
+	"description": "A reading enhancement app for educational purposes."
+}
