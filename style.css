@@ -12,6 +12,7 @@ html[data-theme="light"] {
 	--height-3: 23vh;
 	--github-color: #e7e7e8;
 	--github-fill: #2c2c2c;
+	--github-focus: var(--focus-active-color);
 	--background-color: rgba(28, 28, 30, 0.1);
 	--focus-active-color: #dc3220;
 	--title-color: rgba(27, 27, 27, 0.835);
@@ -37,6 +38,7 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
 	--github-color: #2c2c2c;
 	--github-fill: #e7e7e8;
+	--github-focus: var(--focus-active-color);
 	--background-color: #2c2c2c;
 	--focus-active-color: #d65a31;
 	--title-color: rgb(242, 242, 247);
@@ -282,6 +284,16 @@ button:active {
 /* ------------------------------------------------------------- */
 /* GITHUB CORNER */
 
+.github-corner:focus svg path {
+	fill: var(--github-focus);
+}
+
+.github-corner:focus .octo-arm,
+.github-corner:focus .octo-body {
+	fill: var(--github-color);
+}
+
+.github-corner:focus .octo-arm,
 .github-corner:hover .octo-arm {
 	animation: octocat-wave 560ms ease-in-out;
 }
