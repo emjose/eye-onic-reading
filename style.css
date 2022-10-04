@@ -138,7 +138,7 @@ https://css-tricks.com/overriding-the-default-text-selection-color-with-css/ */
 
 label[for="text"] {
 	text-align: center;
-	margin: 5% 0;
+	margin: 3% 0;
 	font-size: 4.5em;
 	font-weight: 900;
 	color: var(--title-color);
@@ -153,6 +153,11 @@ label[for="text"]:hover {
 .thin {
 	font-weight: 400;
 	color: var(--title-color) !important;
+}
+
+#space {
+	height: 0;
+	width: 0;
 }
 
 /* ------------------------------------------------------------- */
