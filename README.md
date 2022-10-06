@@ -3,9 +3,7 @@
 <table><tr>
 <td> <a href="https://github.com/emjose/keto-food-list/#header"><img src="https://res.cloudinary.com/dn1e07eul/image/upload/v1659330996/Readme%20Headers/header-left_ctkix5.png" alt="previous" style="width: 200px;"/></a> </td>
 <td> <a href="https://github.com/emjose/one-hundred/#header"><img src="https://res.cloudinary.com/dn1e07eul/image/upload/v1659330606/Readme%20Headers/header-center_bkbdbt.png" alt="100 days of code" style="width: 580px;"/></a> </td>
-<td> <a href="https://github.com/emjose/eye-onic-reading/#header"><img src="https://res.cloudinary.com/dn1e07eul/image/upload/v1659332117/Readme%20Headers/header-right-g_zhy4gl.png" alt="next" style="width: 200px;"/></a> </td>
-
-<!-- <td> <a href="https://github.com/emjose/****NEXT-REPO****/#header"><img src="https://res.cloudinary.com/dn1e07eul/image/upload/v1659330646/Readme%20Headers/header-right_eftaz9.png" alt="next" style="width: 200px;"/></a> </td> -->
+<td> <a href="https://github.com/emjose/box-of-shadows/#header"><img src="https://res.cloudinary.com/dn1e07eul/image/upload/v1659330646/Readme%20Headers/header-right_eftaz9.png" alt="next" style="width: 200px;"/></a> </td>
 
 </tr></table>
 
